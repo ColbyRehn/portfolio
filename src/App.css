@@ -4,19 +4,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-.Home-page {
-  position: absolute;
-  background: #FCF7F8;
-}
-
-.Home-content-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#Blob-bg {
+  z-index: 2;
+  height: 80vw;
+  width: 75vw;
+  position: absolute;
+  transform: translate(-49%,-5%);
+}
+
+#Home-page {
+  background: #FCF7F8;
+  position: relative;
+}
+
+#Home-section {
+  z-index: 3;
+  width: 1000px;
+}
+
+#Profile-picture {
+  float: right;
 }
 
 .Home-heading {
@@ -36,11 +48,14 @@
   color: #525252;
 }
 
-.Profile-picture {
-  vertical-align: middle;
-}
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 1000px) {
+  #Home-section {
+    width: 500px;
+  }
+  
+  #Profile-picture {
+    float: none;
+  }
 }
 
