@@ -1,3 +1,9 @@
+#Burger-menu {
+  z-index: 100;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 
 .Page-container {
   z-index: 1;
@@ -9,10 +15,28 @@
   width: 100vw;
 }
 
+.Header-section {
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  transform: translate(-350%,0%);
+}
+
+#Home-icon {
+  position: relative;
+  margin-right: 10px;
+}
+
+.Icon-name {
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+
 #Blob-bg {
   z-index: 2;
-  height: 80vw;
-  width: 75vw;
+  scale: 150%;
   position: absolute;
   transform: translate(-49%,-5%);
 }
@@ -24,7 +48,7 @@
 
 #Home-section {
   z-index: 3;
-  width: 1000px;
+  width: 950px;
 }
 
 #Profile-picture {
@@ -49,12 +73,17 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1600px) {
   #Home-section {
     width: 500px;
   }
+
+  #Blob-bg {
+    scale: 50%;
+  }
   
   #Profile-picture {
+    scale: 50%;
     float: none;
   }
 }
