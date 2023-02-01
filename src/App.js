@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import home from './home.svg'
 import blob from './blob.svg'
@@ -6,7 +7,7 @@ import burger from './burger-menu.svg'
 
 function App() {
   return (
-    <body>
+    <body style={{display: "block"}}>
       <div id="Burger-menu">
         <img id="Burger-icon" src={burger} alt="burger-icon"/>
       </div>
@@ -23,6 +24,9 @@ function App() {
           <text class="Home-subheading">A software engineer<br/></text>
           <text class="Home-subheading">student from Australia.</text>
         </section>
+      </div>
+      <div id="About-page" class="Page-container">
+
       </div>
     </body>
   );
