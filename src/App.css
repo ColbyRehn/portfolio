@@ -1,3 +1,15 @@
+img { 
+  -webkit-user-drag: none; 
+  -khtml-user-drag: none; 
+  -moz-user-drag: none; 
+  -o-user-drag: none; 
+  pointer-events: none;
+  user-select: none;
+}
+
+text {
+  user-select: none;
+}
 
 #Burger-menu-button {
   z-index: 10;
@@ -14,8 +26,9 @@
   border-radius: 20px;
 }
 
-#Burger-menu-button:hover {
-  background-color: #FF5470;
+#Burger-menu-button:hover, .Burger-page-button:hover {
+  background-color: #ff7188;
+  cursor: pointer;
 }
 
 #Burger-icon {
@@ -24,9 +37,10 @@
 
 #Burger-column {
   z-index: 9;
+  flex: 1;
   position: fixed;
   display: none;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   right: -20px;
   width: 400px;
@@ -41,6 +55,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  border: 1px;
+  border-radius: 20px;
 }
 
 .Burger-button-text {
