@@ -1,21 +1,55 @@
 
-#Burger-menu {
-  z-index: 100;
+#Burger-menu-button {
+  z-index: 10;
   position: fixed;
-  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 20px;
   right: 30px;
+  padding: 25px;
+  border: 1px;
+  border-radius: 20px;
+}
+
+#Burger-menu-button:hover {
+  background-color: #FF5470;
 }
 
 #Burger-icon {
   position: sticky;
-  padding: 15px;
-  border: 1px;
-  border-radius: 20px;
-  transform: translate(0px,-10px);
 }
 
-#Burger-icon:hover {
+#Burger-column {
+  z-index: 9;
+  position: fixed;
+  display: none;
+  justify-content: left;
+  align-items: center;
+  right: -20px;
+  width: 400px;
+  height: 100vh;
+  border: 1px;
+  border-radius: 20px;
   background-color: #FF5470;
+}
+
+.Burger-page-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Burger-button-text {
+  padding-left: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
+  color: #FCF7F8;
 }
 
 .Page-container {
@@ -31,7 +65,7 @@
   z-index: 3;
   position: absolute;
   top: 20px;
-  transform: translate(-650px,0px);
+  left: 30px;
 }
 
 #Home-icon {
@@ -90,7 +124,7 @@
 }
 
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
   #Home-section {
     width: 500px;
   }

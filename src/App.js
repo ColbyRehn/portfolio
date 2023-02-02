@@ -1,15 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import home from './home.svg'
 import blob from './blob.svg'
 import profile from './profile.svg'
 import burger from './burger-menu.svg'
+import cross from './cross.svg'
+import homeButton from './home-button.svg'
+import profileButton from './profile-button.svg'
+import projectButton from './bulb-button.svg'
+import contactButton from './contact-button.svg'
 
 function App() {
+  const [isCross, setIsCross] = useState(true);
+  function burgerIcon(event) {
+    var element = document.getElementById("Burger-icon");
+    var menu = document.getElementById("Burger-column").style;
+    setIsCross(!isCross);
+    if (isCross) {
+      element.src = cross;
+      element.alt = "cross-icon";
+      menu.display = "flex";
+    } else {
+      element.src = burger;
+      element.alt = "burger-icon";
+      menu.display = "none";
+    }
+  }
+
   return (
     <body style={{display: "block"}}>
-      <div id="Burger-menu">
-        <img id="Burger-icon" src={burger} alt="burger-icon"/>
+      <div id="Burger-menu-button" onClick={burgerIcon}>
+        <img id="Burger-icon" src={burger} alt="burger-icon" />
+      </div>
+      <div id="Burger-column">
+        <div style={{display: "block"}}>
+          <div class="Burger-page-button">
+            <img src={homeButton} alt="burger-icon" />
+            <text class="Burger-button-text">Home</text>
+          </div>
+          <div class="Burger-page-button">
+            <img src={profileButton} alt="profile-icon" />
+            <text class="Burger-button-text">Profile</text>
+          </div>
+          <div class="Burger-page-button">
+            <img src={projectButton} alt="project-icon" />
+            <text class="Burger-button-text">Projects</text>
+          </div>
+          <div class="Burger-page-button">
+            <img src={contactButton} alt="contact-icon" />
+            <text class="Burger-button-text">Contact</text>
+          </div>
+        </div>
       </div>
       <div id="Home-page" class="Page-container">
         <section class="Header-section">
