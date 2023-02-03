@@ -1,5 +1,4 @@
 img { 
-  -webkit-user-drag: none; 
   -khtml-user-drag: none; 
   -moz-user-drag: none; 
   -o-user-drag: none; 
@@ -7,8 +6,30 @@ img {
   user-select: none;
 }
 
-text {
-  user-select: none;
+::-webkit-scrollbar {
+  width: 18px;
+  background: #FCF7F8;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border: 3px solid #FCF7F8;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #464646;
+}
+
+::selection {
+  background: #90dbcf;
+}
+::-moz-selection {
+  background: #90dbcf;
 }
 
 #Burger-menu-button {
@@ -35,6 +56,11 @@ text {
   position: sticky;
 }
 
+#Cross-icon {
+  position: sticky;
+  display: none;
+}
+
 #Burger-column {
   z-index: 9;
   flex: 1;
@@ -43,7 +69,7 @@ text {
   justify-content: center;
   align-items: center;
   right: -20px;
-  width: 400px;
+  width: 350px;
   height: 100vh;
   border: 1px;
   border-radius: 20px;
@@ -81,11 +107,11 @@ text {
 .Header-section {
   z-index: 3;
   position: absolute;
-  top: 20px;
-  left: 30px;
+  display: flex;
+  margin: 30px;
 }
 
-#Home-icon {
+.Header-icon {
   position: relative;
   margin-right: 10px;
 }
@@ -104,7 +130,7 @@ text {
   transform: translate(-49%,-5%);
 }
 
-#Home-page {
+#Home-page, #About-page, #Project-page, #Contact-page {
   background: #FCF7F8;
 }
 
@@ -118,7 +144,6 @@ text {
 }
 
 .Home-heading {
-  transform-origin: left;
   font-size: 100px;
   font-weight: 700;
   font-style: bold;
@@ -127,22 +152,38 @@ text {
 }
 
 .Home-subheading {
-  transform-origin: left;
   font-size: 35px;
   font-weight: 400;
   font-style: normal;
   color: #525252;
 }
 
-#About-page {
-  background: #FCF7F8;
-  margin: 0px;
-  padding: 0px;
+#about-wave-bg {
+  z-index: 2;
+  scale: 120%;
+  position: absolute;
+}
+
+#About-section {
+  z-index: 3;
+}
+
+.About-heading {
+  line-height: 120px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.About-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
 }
 
 
 @media only screen and (max-width: 1400px) {
-  #Home-section {
+  .Content-section {
     width: 500px;
   }
 
