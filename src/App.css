@@ -66,6 +66,7 @@ img {
   flex: 1;
   position: fixed;
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   right: -20px;
@@ -181,6 +182,100 @@ img {
   font-size: 35px;
 }
 
+#wave-diagonal-bg {
+  z-index: 2;
+  scale: 125%;
+  position: absolute;
+}
+
+#Project-section {
+  z-index: 3;
+  width: 950px;
+}
+
+.Project-heading {
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+}
+
+.Card {
+  position: relative;
+  background-color: #333333;
+  width: 450px;
+  height: 650px;
+  border: 10px;
+  border-radius: 45px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card-image {
+  position: relative;
+  width: 93%;
+}
+
+.Card-heading {
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 50px;
+  color: #FCF7F8;
+  padding: 20px;
+}
+
+.Card-content {
+  height: 25%;
+  width: 80%;
+}
+
+.Card-text, .Card-year {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FCF7F8;
+  text-align: left;
+}
+
+.Card-year {
+  padding-right: 30px;
+  align-self: flex-end;
+}
+
+#Card-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card-button {
+  display: flex;
+}
+
+.Card-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#Card-right-button {
+  float: right;
+}
+
+#Card-left-button {
+  float: left;
+}
+
+#Coming-soon-card {
+  display: none;
+}
 
 @media only screen and (max-width: 1400px) {
   .Content-section {

@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react';
 import './App.css';
+import CycleQueue from './CycleQueue.js';
 import home from './home.svg'
 import about from './about.svg'
 import project from './bulb.svg'
 import contact from './contact.svg'
 import blob from './blob.svg'
 import aboutWave from './about-wave.svg'
+import waveDiagonal from './wave-diagonal.svg'
 import selfie from './selfie.svg'
 import burger from './burger-menu.svg'
 import cross from './cross.svg'
@@ -13,14 +15,18 @@ import homeButton from './home-button.svg'
 import profileButton from './profile-button.svg'
 import projectButton from './bulb-button.svg'
 import contactButton from './contact-button.svg'
+import portfolioProject from './portfolio-project.svg'
+import rightArrow from './right-arrow.svg'
+import leftArrow from './left-arrow.svg'
+import comingSoon from './coming-soon.svg'
 
 function App() {
   const [isCross, setIsCross] = useState(true);
   function burgerIcon(event) {
     event.stopPropagation();
-    var burgerIcon = document.getElementById("Burger-icon").style;
-    var crossIcon = document.getElementById("Cross-icon").style;
-    var menu = document.getElementById("Burger-column").style;
+    const burgerIcon = document.getElementById("Burger-icon").style;
+    const crossIcon = document.getElementById("Cross-icon").style;
+    const menu = document.getElementById("Burger-column").style;
     setIsCross(!isCross);
     if (isCross) {
       crossIcon.display = "initial";
@@ -45,6 +51,34 @@ function App() {
     }
   }
 
+
+  var curr = null;
+  var cycleQueue = null;
+  function initCards(event) {
+    event.stopPropagation();
+    const portfolio = document.getElementById("Portfolio-card").style;
+    const future = document.getElementById("Coming-soon-card").style;
+    curr = portfolio;
+    cycleQueue = CycleQueue;
+    cycleQueue.enqueue(portfolio);
+    cycleQueue.enqueue(future);
+  }
+
+  function nextCard(event) {
+    event.stopPropagation();
+    if (curr === null || cycleQueue === null) {
+      initCards(event);
+    }
+
+    var next = cycleQueue.dequeue()
+    if (curr === next) {
+      next = cycleQueue.dequeue();
+    }
+    curr.display = "none";
+    next.display = "flex";
+    curr = next;
+  }
+
   return (
     <body style={{display: "block"}}>
       <div id="Burger-menu-button" onClick={(e) => burgerIcon(e)}>
@@ -52,23 +86,21 @@ function App() {
         <img id="Cross-icon" src={cross} alt="cross-icon" />
       </div>
       <div id="Burger-column">
-        <div style={{flexDirection: "column"}}>
-          <div class="Burger-page-button" onClick={(e) => scrollTo(e, homeSection)}>
-            <img src={homeButton} alt="burger-icon" />
-            <text class="Burger-button-text">Home</text>
-          </div>
-          <div class="Burger-page-button" onClick={(e) => scrollTo(e, aboutSection)}>
-            <img src={profileButton} alt="profile-icon" />
-            <text class="Burger-button-text">About</text>
-          </div>
-          <div class="Burger-page-button" onClick={(e) => scrollTo(e, projectSection)}>
-            <img src={projectButton} alt="project-icon" />
-            <text class="Burger-button-text">Projects</text>
-          </div>
-          <div class="Burger-page-button" onClick={(e) => scrollTo(e, contactSection)}>
-            <img src={contactButton} alt="contact-icon" />
-            <text class="Burger-button-text">Contact</text>
-          </div>
+        <div class="Burger-page-button" onClick={(e) => scrollTo(e, homeSection)}>
+          <img src={homeButton} alt="burger-icon" />
+          <text class="Burger-button-text">Home</text>
+        </div>
+        <div class="Burger-page-button" onClick={(e) => scrollTo(e, aboutSection)}>
+          <img src={profileButton} alt="profile-icon" />
+          <text class="Burger-button-text">About</text>
+        </div>
+        <div class="Burger-page-button" onClick={(e) => scrollTo(e, projectSection)}>
+          <img src={projectButton} alt="project-icon" />
+          <text class="Burger-button-text">Projects</text>
+        </div>
+        <div class="Burger-page-button" onClick={(e) => scrollTo(e, contactSection)}>
+          <img src={contactButton} alt="contact-icon" />
+          <text class="Burger-button-text">Contact</text>
         </div>
       </div>
       <section class="Header-section">
@@ -108,6 +140,36 @@ function App() {
           <text class="Icon-name">PROJECTS<br/></text>
       </section>
       <div ref={projectSection} id="Project-page" class="Page-container">
+        <img id="wave-diagonal-bg" src={waveDiagonal} alt="wave"/>
+        <section id="Project-section">
+          <text class="Project-heading">Here is my<br/></text>
+          <text class="Project-heading">project timeline<br/></text>
+          <div style={{height: "70px"}}></div>
+          <section id="Card-section">
+            <div id="Card-left-button" class="Card-button" onClick={(e) => nextCard(e)}>
+              <img src={leftArrow} alt="left-button"/>
+            </div>
+            <div id="Portfolio-card" class="Card">
+                <img class="Card-image" src={portfolioProject} alt="Portfolio"/>
+                <text class="Card-heading">Portfolio</text>
+                <section class="Card-content">
+                  <text class="Card-text">Designed UI elements in Figma & programmed with React.js</text>
+                </section>
+                <text class="Card-year">2023</text>
+            </div>
+            <div id="Coming-soon-card" class="Card">
+              <img class="Card-image" src={comingSoon} alt="Coming soon"/>
+                <text class="Card-heading">VR Room</text>
+                <section class="Card-content">
+                  <text class="Card-text">In development!</text>
+                </section>
+                <text class="Card-year">???</text>
+            </div>
+            <div id="Card-right-button" class="Card-button" onClick={(e) => nextCard(e)}>
+              <img src={rightArrow} alt="right-button"/>
+            </div>
+          </section>
+        </section>
       </div>
       <section class="Header-section">
           <img class="Header-icon" src={contact} alt="contact-icon"/>
