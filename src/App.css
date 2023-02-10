@@ -6,6 +6,10 @@ img {
   user-select: none;
 }
 
+/*
+  Scrollbar
+*/
+
 ::-webkit-scrollbar {
   width: 18px;
   background: #FCF7F8;
@@ -31,6 +35,10 @@ img {
 ::-moz-selection {
   background: #90dbcf;
 }
+
+/*
+  Burger menu
+*/
 
 #Burger-menu-button {
   z-index: 10;
@@ -96,14 +104,25 @@ img {
   color: #FCF7F8;
 }
 
+/*
+  Page structure
+*/
+
 .Page-container {
   z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  max-width: 1650px;
+  margin: auto;
 }
+
+/*
+  Header structure
+*/
 
 .Header-section {
   z-index: 3;
@@ -124,9 +143,12 @@ img {
   color: #333333;
 }
 
+/*
+  Home page
+*/
+
 #Blob-bg {
   z-index: 2;
-  scale: 130%;
   position: absolute;
   transform: translate(-49%,-5%);
 }
@@ -159,9 +181,12 @@ img {
   color: #525252;
 }
 
+/*
+  About Page
+*/
+
 #about-wave-bg {
   z-index: 2;
-  scale: 120%;
   position: absolute;
 }
 
@@ -182,10 +207,15 @@ img {
   font-size: 35px;
 }
 
+/*
+  Projects Page
+*/
+
 #wave-diagonal-bg {
   z-index: 2;
-  scale: 125%;
   position: absolute;
+  transform: translate(5%,0%);
+
 }
 
 #Project-section {
@@ -277,13 +307,76 @@ img {
   display: none;
 }
 
+/*
+  Contact Page
+*/
+#Contact-wave-section {
+  position: absolute;
+  width: 1550px;
+}
+
+.Wave {
+  scale: 130%
+}
+
+#Left-wave {
+  float: left;
+}
+
+#Right-wave {
+  float: right;
+}
+
+#Contact-section {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.Contact-heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 85px;
+  margin-bottom: 50px;
+}
+
+#Contact-button {
+  width: 250px;
+  height: 60px;
+  background-color: #333333;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #FCF7F8;
+  text-decoration: none;
+  border: 1px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contact-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*
+  @media Query
+*/
 @media only screen and (max-width: 1400px) {
   .Content-section {
     width: 500px;
   }
 
-  #Blob-bg {
-    scale: 50%;
+  .Wave {
+    scale: 130%;
   }
   
   #Profile-picture {

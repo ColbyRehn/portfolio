@@ -19,6 +19,9 @@ import portfolioProject from './portfolio-project.svg'
 import rightArrow from './right-arrow.svg'
 import leftArrow from './left-arrow.svg'
 import comingSoon from './coming-soon.svg'
+import rightWave from './right-wave.svg'
+import leftWave from './left-wave.svg'
+
 
 function App() {
   const [isCross, setIsCross] = useState(true);
@@ -108,7 +111,7 @@ function App() {
           <text class="Icon-name">HOME<br/></text>
         </section>
       <div ref={homeSection} id="Home-page" class="Page-container">
-        <img id="Blob-bg" src={blob} alt="blob"/>
+        <img id="Blob-bg" class="Wave" src={blob} alt="blob"/>
         <section id="Home-section">
           <img id="Profile-picture" src={selfie} alt="Colby"/>
           <text class="Home-heading">Hello!<br/></text>
@@ -122,7 +125,7 @@ function App() {
           <text class="Icon-name">ABOUT<br/></text>
       </section>
       <div ref={aboutSection} id="About-page" class="Page-container">
-        <img id="about-wave-bg" src={aboutWave} alt="wave"/>
+        <img id="about-wave-bg" class="Wave" src={aboutWave} alt="wave"/>
         <section id="About-section">
           <text class="About-heading">Why do I code?<br/></text>
           <text class="About-text">I enjoy bringing creative ideas to life. The<br/></text>
@@ -140,7 +143,7 @@ function App() {
           <text class="Icon-name">PROJECTS<br/></text>
       </section>
       <div ref={projectSection} id="Project-page" class="Page-container">
-        <img id="wave-diagonal-bg" src={waveDiagonal} alt="wave"/>
+        <img id="wave-diagonal-bg" class="Wave" src={waveDiagonal} alt="wave"/>
         <section id="Project-section">
           <text class="Project-heading">Here is my<br/></text>
           <text class="Project-heading">project timeline<br/></text>
@@ -161,7 +164,7 @@ function App() {
               <img class="Card-image" src={comingSoon} alt="Coming soon"/>
                 <text class="Card-heading">VR Room</text>
                 <section class="Card-content">
-                  <text class="Card-text">In development!</text>
+                  <text class="Card-text">Check back later. This project is in development</text>
                 </section>
                 <text class="Card-year">???</text>
             </div>
@@ -176,6 +179,14 @@ function App() {
           <text class="Icon-name">CONTACT<br/></text>
       </section>
       <div ref={contactSection} id="Contact-page" class="Page-container">
+        <section id="Contact-wave-section">
+          <img id="Left-wave" class="Wave" src={leftWave} alt="left wave"/>
+          <img id="Right-wave" class="Wave" src={rightWave} alt="right wave"/>
+        </section>
+        <section id="Contact-section">
+          <text class="Contact-heading">Let's chat!</text>
+          <a id="Contact-button" href="mailto:rehn.colby@gmail.com">Email Me</a>
+        </section>
       </div>
     </body>
   );
