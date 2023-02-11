@@ -150,6 +150,7 @@ img {
 #Blob-bg {
   z-index: 2;
   position: absolute;
+  scale: 130%;
   transform: translate(-49%,-5%);
 }
 
@@ -188,6 +189,7 @@ img {
 #about-wave-bg {
   z-index: 2;
   position: absolute;
+  scale: 110%;
 }
 
 #About-section {
@@ -214,8 +216,8 @@ img {
 #wave-diagonal-bg {
   z-index: 2;
   position: absolute;
-  transform: translate(5%,0%);
-
+  scale: 120%;
+  transform: translate(-9px,0%);
 }
 
 #Project-section {
@@ -312,18 +314,15 @@ img {
 */
 #Contact-wave-section {
   position: absolute;
-  width: 1550px;
+  width: 100vw;
 }
-
-.Wave {
-  scale: 130%
-}
-
 #Left-wave {
+  height: 100vh;
   float: left;
 }
 
 #Right-wave {
+  height: 100vh;
   float: right;
 }
 
