@@ -62,7 +62,7 @@ function App() {
     const portfolio = document.getElementById("Portfolio-card").style;
     const future = document.getElementById("Coming-soon-card").style;
     curr = portfolio;
-    cycleQueue = CycleQueue;
+    cycleQueue = new CycleQueue();
     cycleQueue.enqueue(portfolio);
     cycleQueue.enqueue(future);
   }
@@ -83,112 +83,110 @@ function App() {
   }
 
   return (
-    <body style={{display: "block"}}>
-      <div id="Burger-menu-button" onClick={(e) => burgerIcon(e)}>
-        <img id="Burger-icon" src={burger} alt="burger-icon" />
-        <img id="Cross-icon" src={cross} alt="cross-icon" />
-      </div>
-      <div id="Burger-column">
-        <div class="Burger-page-button" onClick={(e) => scrollTo(e, homeSection)}>
-          <img src={homeButton} alt="burger-icon" />
-          <text class="Burger-button-text">Home</text>
+      <div style={{overflowX: "hidden", position: "relative"}}>
+        <div id="Burger-menu-button" onClick={(e) => burgerIcon(e)}>
+          <img id="Burger-icon" src={burger} alt="burger-icon" />
+          <img id="Cross-icon" src={cross} alt="cross-icon" />
         </div>
-        <div class="Burger-page-button" onClick={(e) => scrollTo(e, aboutSection)}>
-          <img src={profileButton} alt="profile-icon" />
-          <text class="Burger-button-text">About</text>
+        <div id="Burger-column">
+          <div class="Burger-page-button" onClick={(e) => scrollTo(e, homeSection)}>
+            <img src={homeButton} alt="burger-icon" />
+            <text class="Burger-button-text">Home</text>
+          </div>
+          <div class="Burger-page-button" onClick={(e) => scrollTo(e, aboutSection)}>
+            <img src={profileButton} alt="profile-icon" />
+            <text class="Burger-button-text">About</text>
+          </div>
+          <div class="Burger-page-button" onClick={(e) => scrollTo(e, projectSection)}>
+            <img src={projectButton} alt="project-icon" />
+            <text class="Burger-button-text">Projects</text>
+          </div>
+          <div class="Burger-page-button" onClick={(e) => scrollTo(e, contactSection)}>
+            <img src={contactButton} alt="contact-icon" />
+            <text class="Burger-button-text">Contact</text>
+          </div>
         </div>
-        <div class="Burger-page-button" onClick={(e) => scrollTo(e, projectSection)}>
-          <img src={projectButton} alt="project-icon" />
-          <text class="Burger-button-text">Projects</text>
-        </div>
-        <div class="Burger-page-button" onClick={(e) => scrollTo(e, contactSection)}>
-          <img src={contactButton} alt="contact-icon" />
-          <text class="Burger-button-text">Contact</text>
-        </div>
-      </div>
-      <section class="Header-section">
-          <img class="Header-icon" src={home} alt="home-icon"/>
-          <text class="Icon-name">HOME<br/></text>
-        </section>
-      <div ref={homeSection} id="Home-page" class="Page-container">
-        <img id="Blob-bg" src={blob} alt="blob"/>
-        <section id="Home-section">
-          <img id="Profile-picture" src={selfie} alt="Colby"/>
-          <text class="Home-heading">Hello!<br/></text>
-          <text class="Home-heading">I'm Colby.<br/></text>
-          <text class="Home-subheading">A software engineer<br/></text>
-          <text class="Home-subheading">student from Australia.</text>
-        </section>
-      </div>
-      <section class="Header-section">
-          <img class="Header-icon" src={about} alt="profile-icon"/>
-          <text class="Icon-name">ABOUT<br/></text>
-      </section>
-      <div ref={aboutSection} id="About-page" class="Page-container">
-        <img id="about-wave-bg" src={aboutWave} alt="wave"/>
-        <section id="About-section">
-          <text class="About-heading">Why do I code?<br/></text>
-          <text class="About-text">I enjoy bringing creative ideas to life. The<br/></text>
-          <text class="About-text">process of software design challenges<br/></text>
-          <text class="About-text">me to adapt to new & exciting tools.<br/></text>
-          <div style={{height: "60px"}}></div>
-          <text class="About-heading">What are my goals?<br/></text>
-          <text class="About-text">I aim to create inclusive & accessible <br/></text>
-          <text class="About-text">products for a diverse audience. Also,<br/></text>
-          <text class="About-text">I strive to improve people’s well-being.<br/></text>
-        </section>
-      </div>
-      <section class="Header-section">
-          <img class="Header-icon" src={project} alt="project-icon"/>
-          <text class="Icon-name">PROJECTS<br/></text>
-      </section>
-      <div ref={projectSection} id="Project-page" class="Page-container">
-        <img id="wave-diagonal-bg" src={waveDiagonal} alt="wave"/>
-        <section id="Project-section">
-          <text class="Project-heading">Here is my<br/></text>
-          <text class="Project-heading">project timeline<br/></text>
-          <div style={{height: "70px"}}></div>
-          <section id="Card-section">
-            <div id="Card-left-button" class="Card-button" onClick={(e) => nextCard(e)}>
-              <img src={leftArrow} alt="left-button"/>
-            </div>
-            <div id="Portfolio-card" class="Card">
-                <img class="Card-image" src={portfolioProject} alt="Portfolio"/>
-                <text class="Card-heading">Portfolio</text>
-                <section class="Card-content">
-                  <text class="Card-text">Designed UI elements in Figma & programmed with React.js</text>
-                </section>
-                <text class="Card-year">2023</text>
-            </div>
-            <div id="Coming-soon-card" class="Card">
-              <img class="Card-image" src={comingSoon} alt="Coming soon"/>
-                <text class="Card-heading">VR Room</text>
-                <section class="Card-content">
-                  <text class="Card-text">Check back later. This project is in development</text>
-                </section>
-                <text class="Card-year">???</text>
-            </div>
-            <div id="Card-right-button" class="Card-button" onClick={(e) => nextCard(e)}>
-              <img src={rightArrow} alt="right-button"/>
-            </div>
+        <section class="Header-section">
+            <img class="Header-icon" src={home} alt="home-icon"/>
+            <text class="Icon-name">HOME<br/></text>
           </section>
+        <div ref={homeSection} id="Home-page" class="Page-container">
+          <img id="Blob-bg" src={blob} alt="blob"/>
+          <section id="Home-section">
+            <img id="Profile-picture" src={selfie} alt="Colby"/>
+            <text class="Home-heading">Hello!<br/></text>
+            <text class="Home-heading">I'm Colby.<br/></text>
+            <text class="Home-subheading">A software engineer<br/></text>
+            <text class="Home-subheading">student from Australia.</text>
+          </section>
+        </div>
+        <section class="Header-section">
+            <img class="Header-icon" src={about} alt="profile-icon"/>
+            <text class="Icon-name">ABOUT<br/></text>
         </section>
-      </div>
-      <section class="Header-section">
-          <img class="Header-icon" src={contact} alt="contact-icon"/>
-          <text class="Icon-name">CONTACT<br/></text>
-      </section>
-      <div ref={contactSection} id="Contact-page" class="Page-container">
-        <section id="Contact-wave-section">
+        <div ref={aboutSection} id="About-page" class="Page-container">
+          <img id="about-wave-bg" src={aboutWave} alt="wave"/>
+          <section id="About-section">
+            <text class="About-heading">Why do I code?<br/></text>
+            <text class="About-text">I enjoy bringing creative ideas to life. The<br/></text>
+            <text class="About-text">process of software design challenges<br/></text>
+            <text class="About-text">me to adapt to new & exciting tools.<br/></text>
+            <div style={{height: "60px"}}></div>
+            <text class="About-heading">What are my goals?<br/></text>
+            <text class="About-text">I aim to create inclusive & accessible <br/></text>
+            <text class="About-text">products for a diverse audience. Also,<br/></text>
+            <text class="About-text">I strive to improve people’s well-being.<br/></text>
+          </section>
+        </div>
+        <section class="Header-section">
+            <img class="Header-icon" src={project} alt="project-icon"/>
+            <text class="Icon-name">PROJECTS<br/></text>
+        </section>
+        <div ref={projectSection} id="Project-page" class="Page-container">
+          <img id="wave-diagonal-bg" src={waveDiagonal} alt="wave"/>
+          <section id="Project-section">
+            <text class="Project-heading">Here is my<br/></text>
+            <text class="Project-heading">project timeline<br/></text>
+            <div style={{height: "70px"}}></div>
+            <section id="Card-section">
+              <div id="Card-left-button" class="Card-button" onClick={(e) => nextCard(e)}>
+                <img src={leftArrow} alt="left-button"/>
+              </div>
+              <div id="Portfolio-card" class="Card">
+                  <img class="Card-image" src={portfolioProject} alt="Portfolio"/>
+                  <text class="Card-heading">Portfolio</text>
+                  <section class="Card-content">
+                    <text class="Card-text">Designed UI elements in Figma & programmed with React.js</text>
+                  </section>
+                  <text class="Card-year">2023</text>
+              </div>
+              <div id="Coming-soon-card" class="Card">
+                <img class="Card-image" src={comingSoon} alt="Coming soon"/>
+                  <text class="Card-heading">VR Room</text>
+                  <section class="Card-content">
+                    <text class="Card-text">Check back later. This project is in development</text>
+                  </section>
+                  <text class="Card-year">???</text>
+              </div>
+              <div id="Card-right-button" class="Card-button" onClick={(e) => nextCard(e)}>
+                <img src={rightArrow} alt="right-button"/>
+              </div>
+            </section>
+          </section>
+        </div>
+        <section class="Header-section">
+            <img class="Header-icon" src={contact} alt="contact-icon"/>
+            <text class="Icon-name">CONTACT<br/></text>
+        </section>
+        <div ref={contactSection} id="Contact-page" class="Page-container">
           <img id="Left-wave" src={leftWave} alt="left wave"/>
           <img id="Right-wave"src={rightWave} alt="right wave"/>
-        </section>
-        <section id="Contact-section">
-          <text class="Contact-heading">Let's chat!</text>
-          <a id="Contact-button" href="mailto:rehn.colby@gmail.com">Email Me</a>
-        </section>
+          <section id="Contact-section">
+            <text class="Contact-heading">Let's chat!</text>
+            <a id="Contact-button" href="mailto:rehn.colby@gmail.com">Email Me</a>
+          </section>
+        </div>
       </div>
-    </body>
   );
 }
 

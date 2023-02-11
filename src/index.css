@@ -5,8 +5,43 @@ html {
 body {
   font-family: 'Inter', sans-serif;;
   color: #333333;
+  background-color: #FCF7F8;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background-color: #FCF7F8;
+}
+
+
+/*
+  Scrollbar
+*/
+
+::-webkit-scrollbar {
+  width: 18px;
+  background: #FCF7F8;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border: 3px solid #FCF7F8;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #464646;
+}
+
+::selection {
+  background: #90dbcf;
+}
+::-moz-selection {
+  background: #90dbcf;
 }

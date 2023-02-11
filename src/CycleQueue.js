@@ -30,4 +30,4 @@ class CycleQueue {
 }
 
 
-export default new CycleQueue();
+export default CycleQueue;

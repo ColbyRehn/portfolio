@@ -44,12 +44,13 @@ img {
   z-index: 10;
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   top: 20px;
-  right: 30px;
+  right: 50px;
   padding: 25px;
   border: 1px;
   border-radius: 20px;
@@ -116,8 +117,7 @@ img {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  max-width: 1650px;
-  margin: auto;
+
 }
 
 /*
@@ -312,18 +312,17 @@ img {
 /*
   Contact Page
 */
-#Contact-wave-section {
-  position: absolute;
-  width: 100vw;
-}
+
 #Left-wave {
+  position: absolute;
   height: 100vh;
-  float: left;
+  left: 0px;
 }
 
 #Right-wave {
+  position: absolute;
   height: 100vh;
-  float: right;
+  right: 0px;
 }
 
 #Contact-section {
@@ -369,18 +368,33 @@ img {
 /*
   @media Query
 */
-@media only screen and (max-width: 1400px) {
-  .Content-section {
-    width: 500px;
+@media only screen and (min-width: 1900px) {
+  #Home-section {
+    width: 950px;
   }
 
-  .Wave {
-    scale: 130%;
+  #Project-section {
+    width: 950px;
   }
-  
-  #Profile-picture {
-    scale: 50%;
-    float: none;
+
+  #Contact-section {
+    width: 600px;
   }
+}
+
+@media only screen and (min-width: 1700px) {
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+}
+
+@media only screen and (min-width: 850px) {
+
 }
 
