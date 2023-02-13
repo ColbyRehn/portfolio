@@ -82,8 +82,21 @@ function App() {
     curr = next;
   }
 
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    if (isCross) {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("Burger-menu-button").style.top = "0.8vw";
+      } else  {
+        document.getElementById("Burger-menu-button").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
+
   return (
-      <div style={{overflowX: "hidden", position: "absolute"}}>
+      <div style={{overflowX: "hidden", position: "relative"}}>
         <div id="Burger-menu-button" onClick={(e) => burgerIcon(e)}>
           <img id="Burger-icon" src={burger} alt="burger-icon" />
           <img id="Cross-icon" src={cross} alt="cross-icon" />

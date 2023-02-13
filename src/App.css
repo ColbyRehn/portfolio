@@ -25,6 +25,7 @@ img {
   padding: 25px;
   border: 1px;
   border-radius: 20px;
+  transition: top 0.3s;
 }
 
 #Burger-menu-button:hover, .Burger-page-button:hover {
@@ -92,6 +93,8 @@ img {
 .Page-container, #Right-wave, #Left-wave {
   height: 1200px;
 }
+
+
 
 /*
   Header structure
@@ -207,7 +210,7 @@ img {
   z-index: 2;
   position: absolute;
   scale: 120%;
-  transform: translate(-9px,0%);
+  transform: translate(-3px,0%);
 }
 
 #Project-section {
@@ -390,6 +393,12 @@ img {
 
 }
 
+
+@media only screen and (max-width: 1230px) {
+  #Contact-wave-section {
+    width: 1230px;
+  }
+}
 
 /*
   @media Query width
@@ -591,7 +600,7 @@ img {
   }
 
   .Icon-name {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
   }
 
   .Header-icon {
@@ -625,6 +634,26 @@ img {
   .About-text {
     font-size: 3vw;
   }
+
+  #Contact-section {
+    width: 40vw;
+  }
+  
+  .Contact-heading {
+    font-size: 7vw;
+    line-height: 2vw;
+    margin-bottom: 7vw;
+  }
+  
+  #Contact-button {
+    width: 25vw;
+    height: 5vw;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    border: 1px;
+    border-radius: 50px;
+  }
+  
 }
 
 @media only screen and (max-width: 800px) {
@@ -717,18 +746,18 @@ img {
   }
 
   #Project-space {
-    height: 10vw;
+    height: 5vw;
   }
 
   .Card {
-    width: 50vw;
-    height: 80vw;
+    width: 40vw;
+    height: 65vw;
     border-radius: 5vw;
   }
 
   .Card-image {
-    width: 47vw;
-    height: 47vw;
+    width: 36vw;
+    height: 36vw;
   }
 
   .Card-heading {
@@ -756,9 +785,38 @@ img {
     width: 9vw;
     height: 9vw;
   }
+
+  #Right-wave {
+    transform: translate(-10vw,0%);
+  }
+
+  #Left-wave {
+    transform: translate(10vw,0%);
+  }
+  
+  #Contact-section {
+    width: 50vw;
+  }
+  
+  .Contact-heading {
+    font-size: 8.5vw;
+    line-height: 3vw;
+    margin-bottom: 5vw;
+  }
+  
+  #Contact-button {
+    width: 30vw;
+    height: 6vw;
+    font-size: 4vw;
+    line-height: 3vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .Page-container, #Right-wave, #Left-wave {
+    height: 800px;
+  }
+  
   #wave-diagonal-bg {
     width: 130vw;
   }
@@ -812,8 +870,42 @@ img {
     width: 9vw;
     height: 9vw;
   }
+
+  #Right-wave {
+    transform: translate(-35vw,0%);
+  }
+
+  #Left-wave {
+    transform: translate(35vw,0%);
+  }
+  
+  #Contact-section {
+    width: 50vw;
+  }
+  
+  .Contact-heading {
+    font-size: 10vw;
+    line-height: 3vw;
+    margin-bottom: 5vw;
+  }
+  
+  #Contact-button {
+    width: 35vw;
+    height: 8vw;
+    font-size: 5vw;
+    line-height: 3vw;
+  }
 }
 
+@media only screen and (max-width: 460px) {
+  .Page-container, #Right-wave, #Left-wave {
+    height: 700px;
+  }
+
+  #Right-wave, #Left-wave{
+    width: 100vw;
+  }
+}
 
 @media only screen and (max-width: 500px) {
   #Home-space {
@@ -833,7 +925,7 @@ img {
   }
 
   .Icon-name {
-    font-size: 6.5vw;
+    font-size: 5vw;
   }
 
   .Header-icon {
@@ -871,9 +963,69 @@ img {
   .About-text {
     font-size: 4vw;
   }
+  
+  #Right-wave {
+    transform: translate(-50vw,0%);
+  }
+
+  #Left-wave {
+    transform: translate(50vw,0%);
+  }
+  
+  #Contact-section {
+    width: 55vw;
+  }
+  
+  .Contact-heading {
+    font-size: 10vw;
+    line-height: 5vw;
+    margin-bottom: 7vw;
+  }
+  
+  #Contact-button {
+    width: 30vw;
+    height: 8vw;
+    font-size: 4vw;
+    line-height: 3vw;
+  }
 }
 
+@media only screen and (max-width: 400px) {
+  #Right-wave {
+    transform: translate(-80vw,0%);
+  }
+
+  #Left-wave {
+    transform: translate(80vw,0%);
+  }
+
+  #Right-wave, #Left-wave {
+    width: initial;
+  }
+  
+  #Contact-section {
+    width: 55vw;
+  }
+  
+  .Contact-heading {
+    font-size: 9vw;
+    line-height: 5vw;
+    margin-bottom: 7vw;
+  }
+  
+  #Contact-button {
+    width: 30vw;
+    height: 9vw;
+    font-size: 4vw;
+    line-height: 3vw;
+  }
+}
+
+
 @media only screen and (max-width: 350px) {
+  .Page-container, #Right-wave, #Left-wave {
+    height: 550px;
+  }
    /* About section */
    #about-wave-bg {
     height: 100vw;
@@ -886,12 +1038,22 @@ img {
   
   .About-heading {
     line-height: 10vw;
-    font-size: 6vw;
+    font-size: 5vw;
   }
   
   .About-text {
-    font-size: 5vw;
+    font-size: 4vw;
   }
+
+  #Right-wave {
+    transform: translate(-140%,0%);
+  }
+
+  #Left-wave {
+    transform: translate(140%,0%);
+  }
+
+  
 }
 
 @media only screen and (max-width: 260px) {
@@ -915,10 +1077,4 @@ img {
  }
 }
 
-
-@media only screen and (max-width: 1230px) {
-  #Contact-wave-section {
-    width: 1230px;
-  }
-}
 
