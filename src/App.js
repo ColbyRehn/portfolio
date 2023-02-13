@@ -83,26 +83,26 @@ function App() {
   }
 
   return (
-      <div style={{overflowX: "hidden", position: "relative"}}>
+      <div style={{overflowX: "hidden", position: "absolute"}}>
         <div id="Burger-menu-button" onClick={(e) => burgerIcon(e)}>
           <img id="Burger-icon" src={burger} alt="burger-icon" />
           <img id="Cross-icon" src={cross} alt="cross-icon" />
         </div>
         <div id="Burger-column">
           <div class="Burger-page-button" onClick={(e) => scrollTo(e, homeSection)}>
-            <img src={homeButton} alt="burger-icon" />
+            <img class="Burger-icon" src={homeButton} alt="burger-icon" />
             <text class="Burger-button-text">Home</text>
           </div>
           <div class="Burger-page-button" onClick={(e) => scrollTo(e, aboutSection)}>
-            <img src={profileButton} alt="profile-icon" />
+            <img class="Burger-icon" src={profileButton} alt="profile-icon" />
             <text class="Burger-button-text">About</text>
           </div>
           <div class="Burger-page-button" onClick={(e) => scrollTo(e, projectSection)}>
-            <img src={projectButton} alt="project-icon" />
+            <img class="Burger-icon" src={projectButton} alt="project-icon" />
             <text class="Burger-button-text">Projects</text>
           </div>
           <div class="Burger-page-button" onClick={(e) => scrollTo(e, contactSection)}>
-            <img src={contactButton} alt="contact-icon" />
+            <img class="Burger-icon" src={contactButton} alt="contact-icon" />
             <text class="Burger-button-text">Contact</text>
           </div>
         </div>
@@ -113,11 +113,14 @@ function App() {
         <div ref={homeSection} id="Home-page" class="Page-container">
           <img id="Blob-bg" src={blob} alt="blob"/>
           <section id="Home-section">
+            <div id="Home-content">
+              <text class="Home-heading">Hello!<br/></text>
+              <text class="Home-heading">I'm Colby.<br/></text>
+              <text class="Home-subheading">A software engineer<br/></text>
+              <text class="Home-subheading">student from Australia.</text>
+            </div>
+            <div id="Home-space"></div>
             <img id="Profile-picture" src={selfie} alt="Colby"/>
-            <text class="Home-heading">Hello!<br/></text>
-            <text class="Home-heading">I'm Colby.<br/></text>
-            <text class="Home-subheading">A software engineer<br/></text>
-            <text class="Home-subheading">student from Australia.</text>
           </section>
         </div>
         <section class="Header-section">
@@ -131,7 +134,7 @@ function App() {
             <text class="About-text">I enjoy bringing creative ideas to life. The<br/></text>
             <text class="About-text">process of software design challenges<br/></text>
             <text class="About-text">me to adapt to new & exciting tools.<br/></text>
-            <div style={{height: "60px"}}></div>
+            <div id="About-space"></div>
             <text class="About-heading">What are my goals?<br/></text>
             <text class="About-text">I aim to create inclusive & accessible <br/></text>
             <text class="About-text">products for a diverse audience. Also,<br/></text>
@@ -147,7 +150,7 @@ function App() {
           <section id="Project-section">
             <text class="Project-heading">Here is my<br/></text>
             <text class="Project-heading">project timeline<br/></text>
-            <div style={{height: "70px"}}></div>
+            <div id="Project-space"></div>
             <section id="Card-section">
               <div id="Card-left-button" class="Card-button" onClick={(e) => nextCard(e)}>
                 <img src={leftArrow} alt="left-button"/>
@@ -179,12 +182,15 @@ function App() {
             <text class="Icon-name">CONTACT<br/></text>
         </section>
         <div ref={contactSection} id="Contact-page" class="Page-container">
-          <img id="Left-wave" src={leftWave} alt="left wave"/>
-          <img id="Right-wave"src={rightWave} alt="right wave"/>
+          <section id="Contact-wave-section">
+            <img id="Left-wave" src={leftWave} alt="left wave"/>
+            <img id="Right-wave"src={rightWave} alt="right wave"/>
+          </section>
           <section id="Contact-section">
             <text class="Contact-heading">Let's chat!</text>
             <a id="Contact-button" href="mailto:rehn.colby@gmail.com">Email Me</a>
           </section>
+          
         </div>
       </div>
   );

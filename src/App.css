@@ -6,35 +6,6 @@ img {
   user-select: none;
 }
 
-/*
-  Scrollbar
-*/
-
-::-webkit-scrollbar {
-  width: 18px;
-  background: #FCF7F8;
-}
-
-::-webkit-scrollbar-track {
-  margin-block: 2px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333333;
-  border: 3px solid #FCF7F8;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #464646;
-}
-
-::selection {
-  background: #90dbcf;
-}
-::-moz-selection {
-  background: #90dbcf;
-}
 
 /*
   Burger menu
@@ -49,7 +20,7 @@ img {
   align-items: center;
   width: 30px;
   height: 30px;
-  top: 20px;
+  top: 15px;
   right: 50px;
   padding: 25px;
   border: 1px;
@@ -115,9 +86,11 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100vw;
+}
 
+.Page-container, #Right-wave, #Left-wave {
+  height: 1200px;
 }
 
 /*
@@ -128,6 +101,9 @@ img {
   z-index: 3;
   position: absolute;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 30px;
 }
 
@@ -160,11 +136,21 @@ img {
 
 #Home-section {
   z-index: 3;
-  width: 950px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-#Profile-picture {
-  float: right;
+#Home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#Home-space {
+  width: 80px;
 }
 
 .Home-heading {
@@ -196,6 +182,10 @@ img {
   z-index: 3;
 }
 
+#About-space{
+  height: 60px;
+}
+
 .About-heading {
   line-height: 120px;
   font-style: normal;
@@ -223,6 +213,7 @@ img {
 #Project-section {
   z-index: 3;
   width: 950px;
+
 }
 
 .Project-heading {
@@ -231,6 +222,10 @@ img {
   font-weight: 700;
   font-size: 50px;
   line-height: 61px;
+}
+
+#Project-space {
+  height: 70px;
 }
 
 .Card {
@@ -312,17 +307,18 @@ img {
 /*
   Contact Page
 */
+#Contact-wave-section {
+  position: absolute;
+  width: 100vw;
+}
+
 
 #Left-wave {
-  position: absolute;
-  height: 100vh;
-  left: 0px;
+  float: left;
 }
 
 #Right-wave {
-  position: absolute;
-  height: 100vh;
-  right: 0px;
+  float: right;
 }
 
 #Contact-section {
@@ -365,36 +361,564 @@ img {
   cursor: pointer;
 }
 
+
 /*
-  @media Query
+  @media Query height
 */
-@media only screen and (min-width: 1900px) {
-  #Home-section {
-    width: 950px;
+@media only screen and (max-height: 950px) and (max-width: 1000px) {
+  .Page-container, #Right-wave, #Left-wave {
+    height: 850px;
+  }
+  
+
+  #Blob-bg {
+    width: 100vw;
+    height: 50vw;
+    transform: translate(-22%, -5%);
+  }
+
+  #about-wave-bg {
+    height: 60vw;
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-height: 800px) and (max-width: 400px) {
+  .Page-container, #Right-wave, #Left-wave {
+    height: 700px;
+  }
+
+}
+
+
+/*
+  @media Query width
+*/
+@media only screen and (max-width: 1700px) {
+  #wave-diagonal-bg {
+    width: 85vw;
   }
 
   #Project-section {
-    width: 950px;
+    width: 60vw;
   }
 
-  #Contact-section {
-    width: 600px;
+  .Project-heading {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+
+  #Project-space {
+    height: 4vw;
+  }
+
+  .Card {
+    width: 30vw;
+    height: 40vw;
+  }
+
+  .Card-image {
+    width: 27vw;
+    height: 27vw;
+  }
+
+  .Card-heading {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    padding: 20px;
+  }
+
+  .Card-content {
+    height: 20%;
+    width: 80%;
+  }
+
+  .Card-text, .Card-year {
+    font-size: 1.8vw;
+    line-height: 1.8vw;
+  }
+
+  .Card-year {
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+  }
+
+  .Card-button {
+    width: 5vw;
+    height: 5vw;
   }
 }
 
-@media only screen and (min-width: 1700px) {
 
+/* Change burger menu to full width */
+@media only screen and (max-width: 1600px) {
+  #Burger-column {
+    width: 100vw;
+    right: 0px;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .Burger-icon {
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  .Burger-button-text {
+    padding-left: 2vw;
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+  
 }
 
-@media only screen and (min-width: 1500px) {
-
+/* Change burger menu text size */
+@media only screen and (max-width: 1000px) {
+  .Burger-icon {
+    width: 8vw;
+    height: 8vw;
+  }
+  
+  .Burger-button-text {
+    padding-left: 2vw;
+    font-size: 8vw;
+    line-height: 9vw;
+  }
+  
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (max-width: 1300px) {
+  #wave-diagonal-bg {
+    width: 90vw;
+  }
 
+  #Project-section {
+    width: 70vw;
+  }
+
+  .Project-heading {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+
+  #Project-space {
+    height: 5vw;
+  }
+
+  .Card {
+    width: 35vw;
+    height: 50vw;
+    border-radius: 3vw;
+  }
+
+  .Card-image {
+    width: 32vw;
+    height: 32vw;
+  }
+
+  .Card-heading {
+    font-size: 3vw;
+    line-height: 3vw;
+    padding: 3vw;
+  }
+
+  .Card-content {
+    height: 20%;
+    width: 80%;
+  }
+
+  .Card-text, .Card-year {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+
+  .Card-year {
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+  }
+
+  .Card-button {
+    width: 6vw;
+    height: 6vw;
+  }
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (max-width: 1100px) {
+  #Burger-menu-button {
+    height: 4vw;
+    width: 4vw;
+    padding: 2vw;
+    border: 1px;
+    border-radius: 2vw;
+    right: 5vw;
+    top: 2vw
+  }
 
+  #Burger-icon {
+    height: 6vw;
+    width: 6vw;
+  }
+  
+  #Cross-icon {
+    height: 6vw;
+    width: 6vw;
+  }
+  
+  
+  #Home-space {
+    width: 6vw;
+    height: 5vw;
+  }
+
+  .Home-heading {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+  
+  .Home-subheading {
+    font-size: 3vw;
+    font-weight: 400;
+    font-style: normal;
+    color: #525252;
+  }
+
+  #Home-section {
+    flex-direction: column;
+  }
+
+  .Header-section {
+    margin: 2vw;
+  }
+
+  .Icon-name {
+    font-size: 4.5vw;
+  }
+
+  .Header-icon {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1vw;
+  }
+
+  #Profile-picture {
+    width: 40vw;
+    height: 30vw;
+  }
+
+  #Blob-bg {
+    width: 60vw;
+    height: 80vw;
+    transform: translate(-23%, -18%);
+  }
+
+  /* About section */
+  #about-wave-bg {
+    height: 70vw;
+    width: 70vw;
+  }
+  
+  .About-heading {
+    line-height: 10vw;
+    font-size: 4vw;
+  }
+  
+  .About-text {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #Burger-menu-button {
+    height: 6vw;
+    width: 6vw;
+    padding: 2vw;
+    border-radius: 3vw;
+  }
+
+  #Burger-icon {
+    height: 7vw;
+    width: 7vw;
+  }
+  
+  #Cross-icon {
+    height: 7vw;
+    width: 7vw;
+  }
+  
+  
+  #Home-space {
+    width: 7vw;
+    height: 6vw;
+  }
+
+  .Home-heading {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+  
+  .Home-subheading {
+    font-size: 5vw;
+    font-weight: 400;
+    font-style: normal;
+    color: #525252;
+  }
+
+  .Icon-name {
+    font-size: 5vw;
+  }
+
+  .Header-icon {
+    width: 7vw;
+    height: 7vw;
+    margin-right: 1vw;
+  }
+
+  #Profile-picture {
+    width: 60vw;
+    height: 40vw;
+  }
+
+  #Blob-bg {
+    width: 70vw;
+    height: 90vw;
+    transform: translate(-16%, -20%);
+  }
+
+   /* About section */
+  #about-wave-bg {
+    height: 80vw;
+    width: 80vw;
+  }
+
+  #About-space{
+    height: 15px;
+  }
+  
+  .About-heading {
+    line-height: 10vw;
+    font-size: 5vw;
+  }
+  
+  .About-text {
+    font-size: 3.5vw;
+  }
+
+  #wave-diagonal-bg {
+    width: 130vw;
+  }
+
+  #Project-section {
+    width: 80vw;
+  }
+
+  .Project-heading {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+
+  #Project-space {
+    height: 10vw;
+  }
+
+  .Card {
+    width: 50vw;
+    height: 80vw;
+    border-radius: 5vw;
+  }
+
+  .Card-image {
+    width: 47vw;
+    height: 47vw;
+  }
+
+  .Card-heading {
+    font-size: 5vw;
+    line-height: 4vw;
+    padding: 3vw;
+  }
+
+  .Card-content {
+    height: 35%;
+    width: 80%;
+  }
+
+  .Card-text, .Card-year {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+
+  .Card-year {
+    padding-right: 2.5vw;
+    padding-bottom: 3vw;
+  }
+
+  .Card-button {
+    width: 9vw;
+    height: 9vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #wave-diagonal-bg {
+    width: 130vw;
+  }
+
+  #Project-section {
+    width: 90vw;
+  }
+
+  .Project-heading {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+
+  #Project-space {
+    height: 10vw;
+  }
+
+  .Card {
+    width: 60vw;
+    height: 90vw;
+    border-radius: 5vw;
+  }
+
+  .Card-image {
+    width: 55vw;
+    height: 55vw;
+  }
+
+  .Card-heading {
+    font-size: 5.5vw;
+    line-height: 4vw;
+    padding: 3vw;
+  }
+
+  .Card-content {
+    height: 30%;
+    width: 80%;
+  }
+
+  .Card-text, .Card-year {
+    font-size: 3.5vw;
+    line-height: 2.5vw;
+  }
+
+  .Card-year {
+    padding-right: 2.5vw;
+    padding-bottom: 3vw;
+  }
+
+  .Card-button {
+    width: 9vw;
+    height: 9vw;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  #Home-space {
+    height: 20vw;
+  }
+
+  .Home-heading {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+  
+  .Home-subheading {
+    font-size: 6vw;
+    font-weight: 400;
+    font-style: normal;
+    color: #525252;
+  }
+
+  .Icon-name {
+    font-size: 6.5vw;
+  }
+
+  .Header-icon {
+    width: 7vw;
+    height: 7vw;
+    margin-right: 1vw;
+  }
+
+  #Profile-picture {
+    width: 80vw;
+    height: 60vw;
+  }
+
+  #Blob-bg {
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-16%, -34%);
+  }
+
+   /* About section */
+   #about-wave-bg {
+    height: 95vw;
+    width: 90vw;
+  }
+
+  #About-space{
+    height: 20px;
+  }
+  
+  .About-heading {
+    line-height: 13vw;
+    font-size: 6vw;
+  }
+  
+  .About-text {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+   /* About section */
+   #about-wave-bg {
+    height: 100vw;
+    width: 100vw;
+  }
+
+  #About-space{
+    height: 10px;
+  }
+  
+  .About-heading {
+    line-height: 10vw;
+    font-size: 6vw;
+  }
+  
+  .About-text {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  /* About section */
+  #about-wave-bg {
+   height: 150vw;
+   width: 140vw;
+ }
+
+ #About-space{
+   height: 5px;
+ }
+ 
+ .About-heading {
+   line-height: 15vw;
+   font-size: 6vw;
+ }
+ 
+ .About-text {
+   font-size: 5vw;
+ }
+}
+
+
+@media only screen and (max-width: 1230px) {
+  #Contact-wave-section {
+    width: 1230px;
+  }
 }
 
