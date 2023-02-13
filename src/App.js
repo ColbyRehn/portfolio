@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './App.css';
+import './Query.css';
 import CycleQueue from './CycleQueue.js';
 import home from './home.svg'
 import about from './about.svg'
@@ -19,8 +20,7 @@ import portfolioProject from './portfolio-project.svg'
 import rightArrow from './right-arrow.svg'
 import leftArrow from './left-arrow.svg'
 import comingSoon from './coming-soon.svg'
-import rightWave from './right-wave.svg'
-import leftWave from './left-wave.svg'
+import contactCircle from './contact-circle.svg'
 
 
 function App() {
@@ -195,9 +195,8 @@ function App() {
             <text class="Icon-name">CONTACT<br/></text>
         </section>
         <div ref={contactSection} id="Contact-page" class="Page-container">
-          <section id="Contact-wave-section">
-            <img id="Left-wave" src={leftWave} alt="left wave"/>
-            <img id="Right-wave"src={rightWave} alt="right wave"/>
+          <section id="Contact-circle-section">
+            <img id="Contact-circle" src={contactCircle} alt="Circle"/>
           </section>
           <section id="Contact-section">
             <text class="Contact-heading">Let's chat!</text>

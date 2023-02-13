@@ -1,0 +1,655 @@
+/*
+  @media Query height
+*/
+@media only screen and (max-height: 950px) and (max-width: 1000px) {
+    .Page-container {
+      height: 850px;
+    }
+    
+  
+    #Blob-bg {
+      width: 100vw;
+      height: 50vw;
+      transform: translate(-22%, -5%);
+    }
+  
+    #about-wave-bg {
+      height: 60vw;
+      width: 60vw;
+    }
+  }
+  
+  @media only screen and (max-height: 800px) and (max-width: 400px) {
+    .Page-container {
+      height: 700px;
+    }
+  
+  }
+  
+  
+  @media only screen and (max-width: 1230px) {
+    #Contact-wave-section {
+      width: 1230px;
+    }
+  }
+  
+  /*
+    @media Query width
+  */
+  @media only screen and (max-width: 1700px) {
+    #wave-diagonal-bg {
+      width: 85vw;
+    }
+  
+    #Project-section {
+      width: 60vw;
+    }
+  
+    .Project-heading {
+      font-size: 3vw;
+      line-height: 3.5vw;
+    }
+  
+    #Project-space {
+      height: 4vw;
+    }
+  
+    .Card {
+      width: 30vw;
+      height: 40vw;
+    }
+  
+    .Card-image {
+      width: 27vw;
+      height: 27vw;
+    }
+  
+    .Card-heading {
+      font-size: 2.5vw;
+      line-height: 3vw;
+      padding: 20px;
+    }
+  
+    .Card-content {
+      height: 20%;
+      width: 80%;
+    }
+  
+    .Card-text, .Card-year {
+      font-size: 1.8vw;
+      line-height: 1.8vw;
+    }
+  
+    .Card-year {
+      padding-right: 2vw;
+      padding-bottom: 2vw;
+    }
+  
+    .Card-button {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+  
+  
+  /* Change burger menu to full width */
+  @media only screen and (max-width: 1600px) {
+    #Burger-column {
+      width: 100vw;
+      right: 0px;
+      border: 0px;
+      border-radius: 0px;
+    }
+  
+    .Burger-icon {
+      width: 5vw;
+      height: 5vw;
+    }
+    
+    .Burger-button-text {
+      padding-left: 2vw;
+      font-size: 5vw;
+      line-height: 6vw;
+    }
+    
+  }
+  
+  /* Change burger menu text size */
+  @media only screen and (max-width: 1000px) {
+    .Burger-icon {
+      width: 8vw;
+      height: 8vw;
+    }
+    
+    .Burger-button-text {
+      padding-left: 2vw;
+      font-size: 8vw;
+      line-height: 9vw;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    #wave-diagonal-bg {
+      width: 90vw;
+    }
+  
+    #Project-section {
+      width: 70vw;
+    }
+  
+    .Project-heading {
+      font-size: 4vw;
+      line-height: 4vw;
+    }
+  
+    #Project-space {
+      height: 5vw;
+    }
+  
+    .Card {
+      width: 35vw;
+      height: 50vw;
+      border-radius: 3vw;
+    }
+  
+    .Card-image {
+      width: 32vw;
+      height: 32vw;
+    }
+  
+    .Card-heading {
+      font-size: 3vw;
+      line-height: 3vw;
+      padding: 3vw;
+    }
+  
+    .Card-content {
+      height: 20%;
+      width: 80%;
+    }
+  
+    .Card-text, .Card-year {
+      font-size: 2vw;
+      line-height: 2vw;
+    }
+  
+    .Card-year {
+      padding-right: 2vw;
+      padding-bottom: 2vw;
+    }
+  
+    .Card-button {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    #Burger-menu-button {
+      height: 4vw;
+      width: 4vw;
+      padding: 2vw;
+      border: 1px;
+      border-radius: 2vw;
+      right: 5vw;
+      top: 2vw
+    }
+  
+    #Burger-icon {
+      height: 6vw;
+      width: 6vw;
+    }
+    
+    #Cross-icon {
+      height: 6vw;
+      width: 6vw;
+    }
+    
+    
+    #Home-space {
+      width: 6vw;
+      height: 5vw;
+    }
+  
+    .Home-heading {
+      font-size: 8vw;
+      line-height: 8vw;
+    }
+    
+    .Home-subheading {
+      font-size: 2.7vw;
+      font-weight: 400;
+      font-style: normal;
+      color: #525252;
+    }
+  
+    #Home-section {
+      flex-direction: column;
+    }
+  
+    .Header-section {
+      margin: 2vw;
+    }
+  
+    .Icon-name {
+      font-size: 3.5vw;
+    }
+  
+    .Header-icon {
+      width: 5vw;
+      height: 5vw;
+      margin-right: 1vw;
+    }
+  
+    #Profile-picture {
+      width: 40vw;
+      height: 30vw;
+    }
+  
+    #Blob-bg {
+      width: 60vw;
+      height: 80vw;
+      transform: translate(-23%, -18%);
+    }
+  
+    /* About section */
+    #about-wave-bg {
+      height: 70vw;
+      width: 70vw;
+    }
+    
+    .About-heading {
+      line-height: 10vw;
+      font-size: 4vw;
+    }
+    
+    .About-text {
+      font-size: 3vw;
+    }
+  
+
+    
+
+    
+  }
+  
+  @media only screen and (max-width: 800px) {
+    #Burger-menu-button {
+      height: 6vw;
+      width: 6vw;
+      padding: 2vw;
+      border-radius: 3vw;
+    }
+  
+    #Burger-icon {
+      height: 7vw;
+      width: 7vw;
+    }
+    
+    #Cross-icon {
+      height: 7vw;
+      width: 7vw;
+    }
+    
+    
+    #Home-space {
+      width: 7vw;
+      height: 6vw;
+    }
+  
+    .Home-heading {
+      font-size: 10vw;
+      line-height: 10vw;
+    }
+    
+    .Home-subheading {
+      font-size: 3.5vw;
+      font-weight: 400;
+      font-style: normal;
+      color: #525252;
+    }
+  
+    .Icon-name {
+      font-size: 5vw;
+    }
+  
+    .Header-icon {
+      width: 7vw;
+      height: 7vw;
+      margin-right: 1vw;
+    }
+  
+    #Profile-picture {
+      width: 60vw;
+      height: 40vw;
+    }
+  
+    #Blob-bg {
+      width: 70vw;
+      height: 90vw;
+      transform: translate(-16%, -20%);
+    }
+  
+     /* About section */
+    #about-wave-bg {
+      height: 80vw;
+      width: 80vw;
+    }
+  
+    #About-space{
+      height: 15px;
+    }
+    
+    .About-heading {
+      line-height: 10vw;
+      font-size: 5vw;
+    }
+    
+    .About-text {
+      font-size: 3.5vw;
+    }
+  
+    #wave-diagonal-bg {
+      width: 130vw;
+    }
+  
+    #Project-section {
+      width: 80vw;
+    }
+  
+    .Project-heading {
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+  
+    #Project-space {
+      height: 5vw;
+    }
+  
+    .Card {
+      width: 40vw;
+      height: 65vw;
+      border-radius: 5vw;
+    }
+  
+    .Card-image {
+      width: 36vw;
+      height: 36vw;
+    }
+  
+    .Card-heading {
+      font-size: 5vw;
+      line-height: 4vw;
+      padding: 3vw;
+    }
+  
+    .Card-content {
+      height: 35%;
+      width: 80%;
+    }
+  
+    .Card-text, .Card-year {
+      font-size: 3vw;
+      line-height: 3vw;
+    }
+  
+    .Card-year {
+      padding-right: 2.5vw;
+      padding-bottom: 3vw;
+    }
+  
+    .Card-button {
+      width: 9vw;
+      height: 9vw;
+    }
+    
+    #Contact-circle {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #Contact-section {
+      width: 50vw;
+    }
+    
+    .Contact-heading {
+      font-size: 8.5vw;
+      line-height: 3vw;
+      margin-bottom: 9vw;
+    }
+    
+    #Contact-button {
+      width: 30vw;
+      height: 6vw;
+      font-size: 3.5vw;
+      line-height: 3vw;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .Page-container {
+      height: 800px;
+    }
+    
+    #wave-diagonal-bg {
+      width: 130vw;
+    }
+  
+    #Project-section {
+      width: 90vw;
+    }
+  
+    .Project-heading {
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+  
+    #Project-space {
+      height: 10vw;
+    }
+  
+    .Card {
+      width: 60vw;
+      height: 90vw;
+      border-radius: 5vw;
+    }
+  
+    .Card-image {
+      width: 55vw;
+      height: 55vw;
+    }
+  
+    .Card-heading {
+      font-size: 5.5vw;
+      line-height: 4vw;
+      padding: 3vw;
+    }
+  
+    .Card-content {
+      height: 30%;
+      width: 80%;
+    }
+  
+    .Card-text, .Card-year {
+      font-size: 3.5vw;
+      line-height: 2.5vw;
+    }
+  
+    .Card-year {
+      padding-right: 2.5vw;
+      padding-bottom: 3vw;
+    }
+  
+    .Card-button {
+      width: 9vw;
+      height: 9vw;
+    }
+
+    #Contact-section {
+      width: 50vw;
+    }
+    
+    .Contact-heading {
+      font-size: 8vw;
+      line-height: 3vw;
+      margin-bottom: 5vw;
+    }
+    
+    #Contact-button {
+      width: 30vw;
+      height: 8vw;
+      font-size: 3.5vw;
+      line-height: 3vw;
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 500px) {
+    #Home-space {
+      height: 20vw;
+    }
+  
+    .Home-heading {
+      font-size: 12vw;
+      line-height: 12vw;
+    }
+    
+    .Home-subheading {
+      font-size: 4.5vw;
+      font-weight: 400;
+      font-style: normal;
+      color: #525252;
+    }
+  
+    .Icon-name {
+      font-size: 5vw;
+    }
+  
+    .Header-icon {
+      width: 7vw;
+      height: 7vw;
+      margin-right: 1vw;
+    }
+  
+    #Profile-picture {
+      width: 80vw;
+      height: 60vw;
+    }
+  
+    #Blob-bg {
+      width: 100vw;
+      height: 100vw;
+      transform: translate(-16%, -34%);
+    }
+  
+     /* About section */
+     #about-wave-bg {
+      height: 95vw;
+      width: 90vw;
+    }
+  
+    #About-space{
+      height: 20px;
+    }
+    
+    .About-heading {
+      line-height: 13vw;
+      font-size: 6vw;
+    }
+    
+    .About-text {
+      font-size: 4vw;
+    }
+    
+    #Contact-section {
+      width: 55vw;
+    }
+    
+    .Contact-heading {
+      font-size: 9vw;
+      line-height: 5vw;
+      margin-bottom: 5vw;
+    }
+    
+    #Contact-button {
+      width: 30vw;
+      height: 8vw;
+      font-size: 4vw;
+      line-height: 3vw;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 460px) {
+    .Page-container {
+      height: 800px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #Contact-section {
+      width: 55vw;
+    }
+    
+    .Contact-heading {
+      font-size: 9vw;
+      line-height: 5vw;
+      margin-bottom: 6vw;
+    }
+    
+    #Contact-button {
+      width: 30vw;
+      height: 9vw;
+      font-size: 4vw;
+      line-height: 3vw;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 350px) {
+    .Page-container {
+      height: 550px;
+    }
+     /* About section */
+     #about-wave-bg {
+      height: 100vw;
+      width: 100vw;
+    }
+  
+    #About-space{
+      height: 10px;
+    }
+    
+    .About-heading {
+      line-height: 10vw;
+      font-size: 5vw;
+    }
+    
+    .About-text {
+      font-size: 4vw;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 260px) {
+    /* About section */
+    #about-wave-bg {
+     height: 100vw;
+     width: 100vw;
+   }
+  
+   #About-space{
+     height: 5px;
+   }
+   
+   .About-heading {
+     line-height: 10vw;
+     font-size: 5vw;
+   }
+   
+   .About-text {
+     font-size: 3.8vw;
+   }
+  }
