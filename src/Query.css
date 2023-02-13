@@ -6,7 +6,6 @@
       height: 850px;
     }
     
-  
     #Blob-bg {
       width: 100vw;
       height: 50vw;
@@ -25,7 +24,6 @@
     }
   
   }
-  
   
   @media only screen and (max-width: 1230px) {
     #Contact-wave-section {
@@ -267,10 +265,6 @@
     .About-text {
       font-size: 3vw;
     }
-  
-
-    
-
     
   }
   
@@ -504,11 +498,9 @@
     }
   }
   
-  
-  
   @media only screen and (max-width: 500px) {
     #Home-space {
-      height: 20vw;
+      height: 10vw;
     }
   
     .Home-heading {
@@ -581,7 +573,6 @@
     }
   }
   
-  
   @media only screen and (max-width: 460px) {
     .Page-container {
       height: 800px;
@@ -606,7 +597,6 @@
       line-height: 3vw;
     }
   }
-  
   
   @media only screen and (max-width: 350px) {
     .Page-container {
