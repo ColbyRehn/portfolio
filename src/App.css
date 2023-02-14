@@ -20,18 +20,30 @@ img {
   align-items: center;
   width: 30px;
   height: 30px;
-  top: 15px;
-  right: 50px;
+  top: 10px;
+  right: 20px;
   padding: 25px;
   border: 1px;
   border-radius: 20px;
-  transition: top 0.3s;
 }
 
-#Burger-menu-button:hover, .Burger-page-button:hover {
-  background-color: #ff7188;
-  cursor: pointer;
+@media (hover: hover) {
+  #Burger-menu-button:hover, .Burger-page-button:hover {
+    background-color: #ff7188;
+    cursor: pointer;
+  }
+
+  .Card-button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  #Contact-button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }
+
 
 #Burger-icon {
   position: sticky;
@@ -290,10 +302,6 @@ img {
   display: flex;
 }
 
-.Card-button:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
 
 #Card-right-button {
   float: right;
@@ -350,7 +358,3 @@ img {
   align-items: center;
 }
 
-#Contact-button:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}

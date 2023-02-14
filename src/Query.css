@@ -190,18 +190,18 @@
       padding: 2vw;
       border: 1px;
       border-radius: 2vw;
-      right: 5vw;
-      top: 2vw
+      right: 2vw;
+      top: 1vw
     }
   
     #Burger-icon {
-      height: 6vw;
-      width: 6vw;
+      height: 5vw;
+      width: 5vw;
     }
     
     #Cross-icon {
-      height: 6vw;
-      width: 6vw;
+      height: 5vw;
+      width: 5vw;
     }
     
     
@@ -277,13 +277,13 @@
     }
   
     #Burger-icon {
-      height: 7vw;
-      width: 7vw;
+      height: 6vw;
+      width: 6vw;
     }
     
     #Cross-icon {
-      height: 7vw;
-      width: 7vw;
+      height: 6vw;
+      width: 6vw;
     }
     
     
@@ -327,8 +327,8 @@
   
      /* About section */
     #about-wave-bg {
-      height: 80vw;
-      width: 80vw;
+      height: 85vw;
+      width: 85vw;
     }
   
     #About-space{
@@ -420,12 +420,15 @@
       line-height: 3vw;
     }
   }
-  
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 650px) {
     .Page-container {
       height: 800px;
     }
-    
+  }
+
+  @media only screen and (max-width: 600px) {
+
     #wave-diagonal-bg {
       width: 130vw;
     }
@@ -539,7 +542,7 @@
      /* About section */
      #about-wave-bg {
       height: 100vw;
-      width: 95vw;
+      width: 100vw;
     }
   
     #About-space{
@@ -580,6 +583,10 @@
   }
   
   @media only screen and (max-width: 400px) {
+    .Page-container {
+      height: 600px;
+    }
+    
     #Contact-section {
       width: 55vw;
     }
