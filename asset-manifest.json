@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.9501d887.css",
+    "main.js": "/Portfolio/static/js/main.c0bef9ec.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/selfie.svg": "/Portfolio/static/media/selfie.2886791e324d644a95d0bf4d7008f8dd.svg",
+    "static/media/portfolio-project.svg": "/Portfolio/static/media/portfolio-project.a4fd484a37ddeadde2a9962b11a513b4.svg",
+    "static/media/coming-soon.svg": "/Portfolio/static/media/coming-soon.b5021bf18c0788c212c29546b319d68b.svg",
+    "static/media/wave-diagonal.svg": "/Portfolio/static/media/wave-diagonal.9c005cfdf1db72619ea21d31a24c3d11.svg",
+    "static/media/profile-button.svg": "/Portfolio/static/media/profile-button.1bd0918ac1e3c6ca73427bf037805403.svg",
+    "static/media/about.svg": "/Portfolio/static/media/about.82113186cbf668f5be61957984855c3b.svg",
+    "static/media/bulb-button.svg": "/Portfolio/static/media/bulb-button.14ded622a24c7c654f656fe26417417b.svg",
+    "static/media/bulb.svg": "/Portfolio/static/media/bulb.598d4245bdacf5682ccca4d7650ab18e.svg",
+    "static/media/home.svg": "/Portfolio/static/media/home.837c1da223ed03a77da4d2efd17c1cb4.svg",
+    "static/media/contact-circle.svg": "/Portfolio/static/media/contact-circle.fcfe28a81b63c4dac22cfe38e092a3e0.svg",
+    "static/media/home-button.svg": "/Portfolio/static/media/home-button.56b0b752ae2cd35f749623eb80f35db6.svg",
+    "static/media/contact.svg": "/Portfolio/static/media/contact.2b83aeafb389c3d8aeca601cefa34f4d.svg",
+    "static/media/contact-button.svg": "/Portfolio/static/media/contact-button.b267aeeb30a7ff907197f8e3ebec6af0.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/about-wave.svg": "/Portfolio/static/media/about-wave.d3daa77d7740c100dfc575fc374ba2dc.svg",
+    "static/media/left-arrow.svg": "/Portfolio/static/media/left-arrow.a427d120c1a004807c2ed784e3a7a7a3.svg",
+    "static/media/blob.svg": "/Portfolio/static/media/blob.8079034c5f1739c9572f874aa1b32984.svg",
+    "static/media/right-arrow.svg": "/Portfolio/static/media/right-arrow.db0e6845e546a3b86cbe9fb89c257278.svg",
+    "static/media/burger-menu.svg": "/Portfolio/static/media/burger-menu.213fec331b68bad5c9fcdfb19cfce61f.svg",
+    "static/media/cross.svg": "/Portfolio/static/media/cross.202f4e9076617fd4975a5aee05ac7016.svg",
+    "main.9501d887.css.map": "/Portfolio/static/css/main.9501d887.css.map",
+    "main.c0bef9ec.js.map": "/Portfolio/static/js/main.c0bef9ec.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9501d887.css",
+    "static/js/main.c0bef9ec.js"
+  ]
+}
