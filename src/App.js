@@ -151,7 +151,8 @@ function App() {
             <text class="About-heading">What are my goals?<br/></text>
             <text class="About-text">I aim to create inclusive & accessible <br/></text>
             <text class="About-text">products for a diverse audience. Also,<br/></text>
-            <text class="About-text">I strive to improve people’s well-being.<br/></text>
+            <text class="About-text">I strive to improve people’s well-being<br/></text>
+            <text class="About-text">through secure & entertaining apps.<br/></text>
           </section>
         </div>
         <section class="Header-section">
@@ -172,7 +173,7 @@ function App() {
                   <img class="Card-image" src={portfolioProject} alt="Portfolio"/>
                   <text class="Card-heading">Portfolio</text>
                   <section class="Card-content">
-                    <text class="Card-text">Designed UI elements in Figma & programmed with React.js</text>
+                    <text class="Card-text">Designed UI elements in Figma & programmed with React.js.</text>
                   </section>
                   <text class="Card-year">2023</text>
               </div>
@@ -180,7 +181,7 @@ function App() {
                 <img class="Card-image" src={comingSoon} alt="Coming soon"/>
                   <text class="Card-heading">VR Room</text>
                   <section class="Card-content">
-                    <text class="Card-text">Check back later. This project is in development</text>
+                    <text class="Card-text">Check back later this project is in development!</text>
                   </section>
                   <text class="Card-year">???</text>
               </div>

@@ -362,18 +362,18 @@
     }
   
     .Card {
-      width: 40vw;
+      width: 42vw;
       height: 65vw;
       border-radius: 5vw;
     }
   
     .Card-image {
-      width: 36vw;
-      height: 36vw;
+      width: 38vw;
+      height: 50vw;
     }
   
     .Card-heading {
-      font-size: 5vw;
+      font-size: 4vw;
       line-height: 4vw;
       padding: 3vw;
     }
@@ -384,8 +384,8 @@
     }
   
     .Card-text, .Card-year {
-      font-size: 3vw;
-      line-height: 3vw;
+      font-size: 2.5vw;
+      line-height: 2.5vw;
     }
   
     .Card-year {
@@ -444,19 +444,19 @@
     }
   
     .Card {
-      width: 60vw;
-      height: 90vw;
+      width: 55vw;
+      height: 80vw;
       border-radius: 5vw;
     }
   
     .Card-image {
-      width: 55vw;
+      width: 50vw;
       height: 55vw;
     }
   
     .Card-heading {
       font-size: 5.5vw;
-      line-height: 4vw;
+      line-height: 5.5vw;
       padding: 3vw;
     }
   
@@ -466,8 +466,8 @@
     }
   
     .Card-text, .Card-year {
-      font-size: 3.5vw;
-      line-height: 2.5vw;
+      font-size: 3vw;
+      line-height: 3vw;
     }
   
     .Card-year {
